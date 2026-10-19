@@ -1,0 +1,165 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe0f0, #e2eaff, #fff0cf);
+    color: #663d70;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    max-width: 650px;
+    padding: 30px 22px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 3px solid #fff;
+    border-radius: 28px;
+    box-shadow: 0 12px 35px #bb83ba40;
+    animation: appear 0.45s ease;
+}
+
+.screen.active {
+    display: block;
+}
+
+h1 {
+    color: #ec5594;
+    font-size: clamp(26px, 5vw, 38px);
+}
+
+h2 {
+    line-height: 1.5;
+    font-size: clamp(20px, 4vw, 28px);
+}
+
+p {
+    line-height: 1.8;
+}
+
+.mascot {
+    font-size: 62px;
+    margin: 10px;
+    animation: bounce 1.8s infinite ease-in-out;
+}
+
+button {
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    margin: 14px auto;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 18px;
+    background: linear-gradient(100deg, #ff609d, #ff86b6);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 7px 15px #ec559440;
+}
+
+button:focus-visible {
+    outline: 3px solid #7554c9;
+    outline-offset: 4px;
+}
+
+button.secondary {
+    background: linear-gradient(100deg, #65aaff, #8b85f6);
+}
+
+.feedback {
+    color: #d84d8d;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+.flowers {
+    position: fixed;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    font-size: 24px;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.letter {
+    padding: 20px;
+    margin: 20px 0;
+    background: #fff3f7;
+    border: 2px dashed #ff9abe;
+    border-radius: 18px;
+    font-size: 17px;
+}
+
+video {
+    width: 100%;
+    max-width: 520px;
+    max-height: 60vh;
+    border-radius: 18px;
+    background: #24162e;
+    margin: 15px auto;
+}
+
+#celebration {
+    position: relative;
+    overflow: hidden;
+}
+
+#fireworks {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 25px;
+    animation: burst 1.8s ease-out forwards;
+}
+
+.clap {
+    display: inline-block;
+    animation: bounce 0.35s infinite alternate;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
+}
+
+@keyframes burst {
+    0% { opacity: 0; transform: scale(0.2) rotate(0); }
+    30% { opacity: 1; }
+    100% { opacity: 0; transform: scale(1.8) rotate(180deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

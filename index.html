@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Quest - 20/10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flowers">🌸 🌼 🌷 💖 🌸</div>
+
+    <!-- Màn 1: Chào mừng -->
+    <section id="welcome" class="screen active">
+        <div class="mascot">🐰🌷</div>
+        <h1>Xin chào, đóa hoa của thế giới!</h1>
+        <p>Hôm nay có một điều bí mật dành cho người phụ nữ của chúng ta...</p>
+        <button id="startBtn">Bắt đầu nào! ✨</button>
+    </section>
+
+    <!-- Màn 2: Có hay không -->
+    <section id="question1" class="screen">
+        <div class="mascot">🌹</div>
+        <h2>Đóa hoa của thế giới có biết hôm nay là ngày gì không?</h2>
+        <button id="yesBtn">Có chứ! 💖</button>
+        <button id="noBtn" class="secondary">Không biết... 🙈</button>
+        <p id="feedback1" class="feedback"></p>
+    </section>
+
+    <!-- Màn 3: Chọn ngày -->
+    <section id="question2" class="screen">
+        <div class="mascot">🤔🌸</div>
+        <h2>Vậy hôm nay là ngày gì nào?</h2>
+        <button id="answerA">A. Ngày Quốc tế Phụ nữ </button>
+        <button id="answerB">B. Ngày Phụ nữ Việt Nam </button>
+        <p id="feedback2" class="feedback"></p>
+    </section>
+
+    <!-- Màn 4: Pháo hoa -->
+    <section id="celebration" class="screen">
+        <div id="fireworks" aria-hidden="true"></div>
+        <div class="mascot">🎆🐰🎆</div>
+        <h1>CHÍNH XÁC!</h1>
+        <h2>CHÚC MỪNG NGÀY 20/10! 💖</h2>
+        <p>Phần thưởng đặc biệt đang đến...</p>
+        <button id="videoBtn">Mở video bí mật 🎬</button>
+    </section>
+
+    <!-- Màn 5: Video -->
+    <section id="videoScreen" class="screen">
+        <h1>Video bí mật dành cho các bạn nữ 😂</h1>
+        <p>Xem đến cuối nhé, còn điều bất ngờ nữa!</p>
+<video id="myVideo" width="320" controls>
+    <source src="./Download - Lối tắt.lnk" type="video/mp4">
+    Trình duyệt không thể phát video này.
+</video>
+
+
+        <p id="videoError" class="feedback"></p>
+        <button id="finishVideoBtn">Video xong rồi, tiếp tục 💌</button>
+    </section>
+
+    <!-- Màn 6: Lời chúc -->
+    <section id="wishScreen" class="screen">
+        <div class="mascot">💐💗💐</div>
+        <h1>Gửi đến những đóa hoa tuyệt vời!</h1>
+        <div class="letter">
+            <p id="wishText">
+                [20/10 xin phép được gửi lời chúc tốt đẹp nhất tới tất cả những “đóa hoa”:
+              Luôn rạng rỡ, xinh đẹp và tỏa sáng,
+              luôn khỏe mạnh, ngập tràn tiếng cười,
+              được sống là chính mình, được yêu thương,
+              hạnh phúc bình yên bên gia đình,
+              công việc thuận lợi, tiền tài rủng rỉnh,
+              tâm trí an yên, không suy nghĩ tiêu cực, và
+              có được tất cả mọi điều — trừ vất vả.
+              Hy vọng những đóa hoa của chúng ta sẽ có một ngày lễ thật trọn vẹn và ý nghĩa!]
+            </p>
+        </div>
+        <button id="finalBtn">Đi đến màn cuối ✨</button>
+    </section>
+
+    <!-- Màn 7: Kết thúc -->
+    <section id="finalScreen" class="screen">
+        <div class="mascot">🌹🎉👏🌹</div>
+        <h1>Còn chờ gì nữa?</h1>
+        <h2>Vỗ tay chúc mừng đóa hồng đẹp nhất của chúng ta nào! 💖</h2>
+        <button id="clapBtn">VỖ TAY NÀO! 👏</button>
+        <p id="clapMessage" class="feedback"></p>
+        <button id="replayBtn" class="secondary">Chơi lại từ đầu ↻</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
